@@ -4,7 +4,6 @@ import Todo from "../models/todo"
 import Directory from "../models/directory"
 
 
-
 const getTodos = async (req: Request, res: Response): Promise<void> => {
   try {
     const allTodos: ITodo[] = await Todo.find()
