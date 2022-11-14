@@ -8,6 +8,7 @@ dotenv.config()
 const app: Express = express()
 
 app.use(express.json())
+app.use(express.static(__dirname + "/public"));
 app.use(todoRoutes)
 app.use(directoryRoutes)
 

@@ -6,8 +6,8 @@ import Directory from "../models/directory"
 
 const getTodos = async (req: Request, res: Response): Promise<void> => {
   try {
-    const allTodos: ITodo[] = await Todo.find()
-    res.status(201).send({ todos: allTodos })
+    const todos: ITodo[] = await Todo.find()
+    res.status(201).send({ todos })
   } catch (error) {
     throw error
   }
@@ -88,4 +88,14 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
 }
 
 
-export { getTodos, addTodo, updateTodoDone, updateTodoNotDone, deleteTodo }
+const getTodo = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const info = await Todo.findById(req.params.id);
+    res.status(200).json(info);
+  } catch (error) {
+      throw error
+  }
+}
+
+
+export { getTodos, addTodo, updateTodoDone, updateTodoNotDone, deleteTodo, getTodo }
