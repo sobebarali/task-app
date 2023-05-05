@@ -34,7 +34,6 @@ const task_1 = __importDefault(require("./routes/task"));
 dotenv.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use(express_1.default.static(__dirname + "/public"));
 app.use(user_1.default);
 app.use(task_1.default);
 const uri = process.env.MONGO_URI;
