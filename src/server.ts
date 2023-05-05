@@ -1,25 +1,27 @@
-import express, { Express } from "express"
-import mongoose from "mongoose"
-import todoRoutes from "./routes/todo"
-import directoryRoutes from "./routes/directory"
-import * as dotenv from 'dotenv'
-dotenv.config()
+import express, { Express } from "express";
+import mongoose from "mongoose";
+import * as dotenv from "dotenv";
+import userRouter from "./routes/user";
+import taskRouter from "./routes/task";
+dotenv.config();
 
-const app: Express = express()
+const app: Express = express();
 
-app.use(express.json())
+app.use(express.json());
 app.use(express.static(__dirname + "/public"));
-app.use(todoRoutes)
-app.use(directoryRoutes)
+app.use(userRouter);
+app.use(taskRouter);
 
 const uri: any = process.env.MONGO_URI
 
-const PORT: any =  process.env.PORT || 8000
-mongoose.connect(uri).then(() =>
+const PORT: any = process.env.PORT
+mongoose
+  .connect(uri)
+  .then(() =>
     app.listen(PORT, () =>
       console.log(`Server running on http://localhost:${PORT}`)
     )
   )
-  .catch(error => {
-    throw error
-  })
+  .catch((error) => {
+    throw error;
+  });

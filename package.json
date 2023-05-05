@@ -2,9 +2,9 @@
   "name": "todo-app",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.ts",
+  "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon src/server.ts"
+    "start": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "Sobebar Ali",
@@ -15,9 +15,15 @@
     "@types/nodemon": "^1.19.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "get-short-id": "^3.0.10",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.7.2",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
+    "twilio": "^4.11.0",
     "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.2"
   }
 }
