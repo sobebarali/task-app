@@ -3,10 +3,12 @@ import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 import userRouter from "./routes/user";
 import taskRouter from "./routes/task";
+import cors from "cors";
 dotenv.config();
 
 const app: Express = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(userRouter);
 app.use(taskRouter);
