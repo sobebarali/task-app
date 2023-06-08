@@ -1,7 +1,7 @@
 # Simple Task Manager Application
 
 ## Project Overview
-The Simple Task Manager application is a web application built to help users efficiently manage their tasks. The application provides mobile authentication using Twilio's SMS service for user registration and login. The backend is developed using TypeScript and Node.js, and data is stored in a MongoDB database.
+The Simple Task Manager web application built to help users efficiently manage their tasks. The application provides mobile authentication using Twilio's SMS service for user registration and login. The backend is developed using TypeScript and Node.js, and data is stored in a MongoDB database.
 
 ## Audience
 The Simple Task Manager application is designed for individuals and teams who need a straightforward and effective solution for managing their tasks. The target audience should possess basic knowledge of mobile applications and be familiar with task management concepts.
