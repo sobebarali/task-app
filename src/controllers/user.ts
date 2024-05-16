@@ -14,7 +14,7 @@ const client: twilio.Twilio = twilio(accountSid, authToken);
 const secretKey: any = process.env.SECRET_KEY;
 const expiresIn: number = 60 * 60 * 24 * 365;
 
-const masterPhoneNumber = "9999999999";
+const masterPhoneNumber = "+919999999999";
 const masterOTP = "123456";
 
 const sendOTP = async (req: Request, res: Response) => {
